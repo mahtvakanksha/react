@@ -1,0 +1,44 @@
+react hooks are used to simplify the code, so that we dont need to repeat the same vars and functions to repeat. vid 5- 13:11
+
+react controls UI updation
+
+Babel, a popular JavaScript compiler that transforms modern JavaScript into versions that are compatible with older browsers
+
+useState is respnsible to chnage the state, and propagates it to UI
+
+
+Virtual DOM
+The Virtual DOM (VDOM) is a lightweight, in-memory representation of the actual DOM elements. It is a crucial part of React’s performance optimization. When changes occur in a React component, React first updates the virtual DOM rather than directly manipulating the real DOM, which can be slow and inefficient.
+
+How it works:
+React creates a virtual DOM tree whenever there is a change in the component's state or props.
+This new virtual DOM tree is then compared with the previous virtual DOM tree to determine the changes that need to be made to the real DOM.
+Only the differences (or minimal set of changes) are updated in the real DOM, making the process efficient.
+Reconciliation
+Reconciliation is the process React uses to update the real DOM based on the changes in the virtual DOM. It involves a diffing algorithm that compares the previous virtual DOM with the new virtual DOM to find the minimal set of changes required.
+
+Key points:
+Element type comparison: If the element types are the same, React updates the attributes and reuses the existing DOM node.
+Keys: React uses keys to identify which items have changed, added, or removed in a list of elements. This helps in efficiently updating the UI.
+Component updates: When a component updates, React re-renders the component and compares the new virtual DOM with the old one to determine the necessary updates.
+Fiber
+React Fiber is a reimplementation of React’s core algorithm and architecture aimed at improving responsiveness and providing incremental rendering. Fiber allows React to split rendering work into chunks and spread it out over multiple frames, making it more efficient and capable of handling complex applications smoothly.
+
+Features of Fiber:
+Incremental rendering: Breaking down rendering work into units that can be spread out over multiple frames.
+Prioritization: React can assign different priority levels to different updates, allowing more important updates to be processed first.
+Concurrency: Fiber introduces the ability to pause, abort, and resume work, enabling better handling of tasks without blocking the main thread.
+Error boundaries: Improved error handling capabilities, allowing components to catch errors in their subtree and prevent crashes.
+Summary of the Process
+Component State/Props Change: When a component's state or props change, React triggers a re-render.
+Virtual DOM Update: React creates a new virtual DOM tree based on the updated state/props.
+Reconciliation: React compares the new virtual DOM with the previous one, identifying the minimal set of changes.
+Fiber Architecture: React Fiber schedules and prioritizes these updates, breaking them into chunks if necessary.
+Real DOM Update: Finally, React updates the real DOM with the minimal changes.
+These concepts work together to ensure that React applications update the UI efficiently, leading to better performance and user experience.
+
+
+
+
+
+
