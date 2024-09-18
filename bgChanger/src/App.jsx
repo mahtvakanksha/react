@@ -7,7 +7,7 @@ function App() {
     <>
   <div className="h-screen w-screen" style={{backgroundColor:color}}>
     <div className="fixed bottom-12
-bg-slate-300 m-1   p-3">
+   bg-slate-300 m-1   p-3">
       <div className="bg-slate-100 flex flex-wrap flex-col gap-6 justify-center">
         <button
         onClick={()=>setColor("red")} className="border-double p-2 bg-slate-400 text-black " 

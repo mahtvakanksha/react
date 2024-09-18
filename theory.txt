@@ -37,8 +37,19 @@ Fiber Architecture: React Fiber schedules and prioritizes these updates, breakin
 Real DOM Update: Finally, React updates the real DOM with the minimal changes.
 These concepts work together to ensure that React applications update the UI efficiently, leading to better performance and user experience.
 
+useCallBack:
+react hook that lets you cache a function definition between re renders
+
+usage: skipping re-rendering of components
+
+updating state from memoized useCallBack
+
+preventing an effect to fire too often
+
+optimization
 
 
+every time we use useCallback--it returns a new function
 
-
+useCallback(function,dependencies)
 
